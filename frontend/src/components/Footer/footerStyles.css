@@ -1,0 +1,30 @@
+footer {
+  margin-top: 10vmax;
+  padding: 2vmax;
+  background-color: rgb(34, 33, 33);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer h4 {
+  font-family: "Roboto";
+  font-size: 1vmax;
+}
+.topFooter > h1 {
+  text-align: center;
+  font-size: 2vmax;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.midFooter {
+  text-align: center;
+}
+
+.midFooter p,
+.bottomFooter p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 1vmax auto;
+}

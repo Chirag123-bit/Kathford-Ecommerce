@@ -1,0 +1,24 @@
+.highlight {
+  color: #495ceb !important;
+}
+
+.homeHeading {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.4vmax;
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  background: rgba(21, 21, 21, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  display: flex;
+  margin: 2vmax auto;
+  width: 95vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: rgba(21, 21, 21, 0.1);
+  backdrop-filter: blur(100px);
+}

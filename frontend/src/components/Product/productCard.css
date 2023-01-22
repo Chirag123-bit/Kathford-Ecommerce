@@ -1,0 +1,128 @@
+.productCard {
+  overflow: hidden;
+  width: 260px;
+  height: 400px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 24px rgb(0 0 0 / 10%);
+  padding-bottom: 0;
+  display: block !important;
+  margin: 2vmax;
+  position: relative;
+}
+
+.productCard_image {
+  width: 100%;
+  height: 400px;
+}
+
+.productCard_image img {
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease-in-out;
+}
+
+.productCard-body {
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: rgb(27, 27, 27, 0.8);
+  color: white;
+  bottom: 0px;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+}
+
+.productCard_price {
+  margin: 15px 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.productCard_price span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.productCard_rating > div {
+  justify-content: center !important;
+}
+
+.productCard_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+}
+.productCard_btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+
+.productCard_rating {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.productCard_btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 0;
+}
+.btn-custom {
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: #495ceb;
+  color: #fff;
+  padding: 12px 30px;
+  transition: 0.3;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+
+.productCard_name > h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-top: 0.8rem;
+}
+.revSec {
+  margin-bottom: 2vmax;
+}
+
+.reviews {
+  display: flex;
+  overflow: auto;
+}
+
+.productCard:hover .productCard-body {
+  height: 200px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.productCard:hover img {
+  transform: scale(1.1);
+}
+
+.productCard:hover .productCard_price,
+.productCard:hover .productCard_rating,
+.productCard:hover .productCard_footer {
+  opacity: 1;
+  visibility: visible;
+}

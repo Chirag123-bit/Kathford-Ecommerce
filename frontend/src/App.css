@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(147deg, #00042c 0%, #04619f 74%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+}
+
+.css-ohwg9z {
+  height: 100%;
+}

@@ -1,0 +1,104 @@
+.productsHeading {
+  font-family: "Roboto";
+  font-size: 1.4vmax;
+  width: 20vmax;
+  margin: 5vmax auto;
+
+  background: rgba(21, 21, 21, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2vmax;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5vmax;
+  justify-content: flex-end;
+}
+
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+.page-item {
+  background-color: white;
+  list-style: none;
+  border: 1px solid black;
+  padding: 1vmax 1.5vmax;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.page-link {
+  text-decoration: none;
+  font: 300 0.9vmax "Roboto";
+  color: black;
+  transition: all 0.5s;
+}
+
+.page-item:hover {
+  background-color: orange;
+}
+
+.pageItemActive {
+  background-color: #495ceb;
+  color: white;
+}
+
+.pageItemActive a {
+  color: white;
+}
+
+.filterBox {
+  width: 10vmax;
+  position: absolute;
+  top: 10vmax;
+  left: 1vmax;
+  background: rgba(21, 21, 21, 0.2);
+  backdrop-filter: blur(10px);
+  /* width: min-content; */
+}
+.MuiSlider-root {
+  width: 90% !important;
+  margin: auto;
+}
+
+.categoryBox {
+  padding: 0;
+}
+
+.category-link {
+  list-style: none;
+  font: 400 0.8vmax "Roboto";
+  margin: 0.4vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.category-link:hover {
+  color: #495ceb;
+}
+
+.filterBox fieldset {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.filterBox .MuiTypography-root {
+  background-color: transparent !important;
+}
+
+.MuiTypography-root {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
