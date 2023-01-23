@@ -83,6 +83,7 @@ exports.updateOrder = async (req, res, next) => {
 
   order.orderStatus = req.body.status;
   if (req.body.status === "Shipped") {
+    console.log(order);
     order.orderItems.forEach(async (item) => {
       await updateStock(item.product, item.quantity);
     });
@@ -101,6 +102,7 @@ exports.updateOrder = async (req, res, next) => {
 
 async function updateStock(id, quantity) {
   const product = await Product.findById(id);
+  console.log(id);
   product.stock = product.stock - quantity;
   await product.save({ validateBeforeSave: false });
 }

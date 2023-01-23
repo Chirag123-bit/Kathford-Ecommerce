@@ -100,6 +100,14 @@ exports.updateProfile = async (req, res, next) => {
   });
 };
 
+exports.getUser = async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+  res.status(200).json({
+    success: true,
+    user,
+  });
+};
+
 exports.getAllUsers = async (req, res, next) => {
   const users = await User.find();
   res.status(200).json({
@@ -109,17 +117,11 @@ exports.getAllUsers = async (req, res, next) => {
 };
 
 exports.updateUserRole = async (req, res, next) => {
-  const newUserData = {
-    name: req.body.name,
-    email: req.body.email,
-    role: req.body.role,
-  };
+  const user = await User.findById(req.params.id);
+  const role = user.role == "admin" ? "user" : "admin";
+  user.role = role;
+  await user.save();
 
-  const user = await User.findByIdAndUpdate(req.params.id, newUserData, {
-    new: true,
-    runValidators: true,
-    useFindAndModify: false,
-  });
   res.status(200).json({
     success: true,
     user,

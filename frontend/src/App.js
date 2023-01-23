@@ -24,6 +24,13 @@ import Payment from "./components/cart/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import MyOrders from "./components/Order/myOrder";
 import OrderDetails from "./components/Order/orderDetails";
+import ProductList from "./components/Admin/ProductList";
+import NewProduct from "./components/Admin/NewProduct";
+import OrderList from "./components/Admin/OrderList";
+import ProcessOrder from "./components/Admin/ProcessOrder";
+import UsersList from "./components/Admin/userList";
+import UpdateProduct from "./components/Admin/UpdateProduct";
+import Dashboard from "./components/Admin/Dashboard";
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const [stripeApiKey, setStripeApiKey] = useState(
@@ -98,6 +105,34 @@ function App() {
               <LoginRegister />
             )
           }
+        />
+        <Route
+          path="/admin/dashboard"
+          element={isAuthenticated ? <Dashboard /> : <LoginRegister />}
+        />
+        <Route
+          path="/admin/products"
+          element={isAuthenticated ? <ProductList /> : <LoginRegister />}
+        />
+        <Route
+          path="/admin/product"
+          element={isAuthenticated ? <NewProduct /> : <LoginRegister />}
+        />
+        <Route
+          path="/admin/product/:id"
+          element={isAuthenticated ? <UpdateProduct /> : <LoginRegister />}
+        />
+        <Route
+          path="/admin/orders"
+          element={isAuthenticated ? <OrderList /> : <LoginRegister />}
+        />
+        <Route
+          path="/admin/order/:id"
+          element={isAuthenticated ? <ProcessOrder /> : <LoginRegister />}
+        />
+        <Route
+          path="/admin/users"
+          element={isAuthenticated ? <UsersList /> : <LoginRegister />}
         />
         <Route path="*" element={<h1>404 URL not found</h1>} />
       </Routes>

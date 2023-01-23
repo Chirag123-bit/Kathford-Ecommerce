@@ -12,9 +12,12 @@ const {
 const router = express.Router();
 const { isAuthenticated, authorizedRole } = require("../middleware/auth");
 
-router.route("/review").put(isAuthenticated, addProductReview);
+router.route("/new/review").post(isAuthenticated, addProductReview);
 router.route("/").post(isAuthenticated, authorizedRole("admin"), addProduct);
 router.route("/").get(getProducts);
+router
+  .route("/admin")
+  .get(isAuthenticated, authorizedRole("admin"), getProducts);
 router.route("/:id").put(updateProduct);
 router.route("/:id").get(getProductDetails);
 router.route("/:id").delete(removeProduct);

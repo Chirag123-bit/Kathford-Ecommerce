@@ -37,6 +37,7 @@ function Navbar() {
       link2Url="/products"
       link3Url="/contact"
       link4Url="/about"
+      profileIconUrl="/profile"
     />
   );
 }
